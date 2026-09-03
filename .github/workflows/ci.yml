@@ -1,0 +1,20 @@
+name: RaceDay CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required folders and files
+        run: |
+          test -d docs
+          test -f docs/API_Endpoint_Plan.md
+          test -f docs/RaceDay_Database.sql
+          echo "RaceDay repository structure is valid."
