@@ -210,3 +210,24 @@ INNER JOIN Categories c
     ON en.CategoryId = c.CategoryId
 INNER JOIN Events e
     ON c.EventId = e.EventId;
+    -- ============================================
+-- RESULTS VERIFICATION QUERY
+-- ============================================
+
+SELECT
+    u.FirstName,
+    u.LastName,
+    e.EventName,
+    c.CategoryName,
+    r.FinishTime,
+    r.Position,
+    r.ResultStatus
+FROM Results r
+INNER JOIN Enrolments en
+    ON r.EnrolmentId = en.EnrolmentId
+INNER JOIN Users u
+    ON en.ParticipantId = u.UserId
+INNER JOIN Categories c
+    ON en.CategoryId = c.CategoryId
+INNER JOIN Events e
+    ON c.EventId = e.EventId;
