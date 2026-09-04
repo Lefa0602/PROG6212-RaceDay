@@ -194,3 +194,19 @@ SELECT * FROM EventRoutes;
 
 -- Each event can have zero or more routes.
 -- Each route belongs to one event.
+
+-- RELATIONSHIP VERIFICATION QUERY
+
+SELECT
+    u.FirstName,
+    u.LastName,
+    e.EventName,
+    c.CategoryName,
+    en.Status AS EnrolmentStatus
+FROM Enrolments en
+INNER JOIN Users u
+    ON en.ParticipantId = u.UserId
+INNER JOIN Categories c
+    ON en.CategoryId = c.CategoryId
+INNER JOIN Events e
+    ON c.EventId = e.EventId;
