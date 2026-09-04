@@ -176,3 +176,21 @@ SELECT * FROM Results;
 
 -- View all event routes
 SELECT * FROM EventRoutes;  
+-- ============================================
+-- DATABASE RELATIONSHIP SUMMARY
+-- ============================================
+
+-- Users can organise many events.
+-- Events belong to one organiser.
+
+-- Each event can contain one or more categories.
+-- Categories belong to one event.
+
+-- Participants can have many enrolments.
+-- Each enrolment belongs to one participant and one category.
+
+-- An enrolment can have zero or one race result.
+-- Each result belongs to one enrolment.
+
+-- Each event can have zero or more routes.
+-- Each route belongs to one event.
