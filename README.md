@@ -6,6 +6,30 @@ RaceDay is a full-stack web-based event management platform designed for South A
 
 The system allows organisers to create and manage events, categories, routes, enrolments, and race results. Participants can view events, enter available categories, manage their profiles, and view their results.
 
+## Technology Stack
+
+The RaceDay system is planned as a full-stack web application using the following technologies:
+
+- Frontend: Web-based user interface
+- Backend: RESTful API
+- Database: Microsoft SQL Server
+- Database Management: SQL Server Management Studio (SSMS)
+- Source Control: Git and GitHub
+- Continuous Integration: GitHub Actions
+
+## Project Scope
+
+Part 1 of the RaceDay project focuses on system planning and database design.
+
+The Part 1 deliverables include:
+
+- Entity Relationship Diagram (ERD)
+- SQL Server database schema
+- Sample database data
+- API endpoint plan
+- GitHub repository
+- GitHub Actions continuous integration workflow
+
 ## User Roles
 
 ### Organiser
