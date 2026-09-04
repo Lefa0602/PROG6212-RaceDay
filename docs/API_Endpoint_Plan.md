@@ -23,3 +23,7 @@
 | PUT | /api/results/{id} | Update a race result | Organiser | FinishTime, Position, ResultStatus | Updated result |
 | GET | /api/routes | View event routes | Public | None | Route list |
 | POST | /api/routes | Add an event route | Organiser | RouteName, DistanceKm, RouteDescription, RouteFileUrl | Created route |
+| GET | `/api/events/{id}/categories` | View categories for a specific event | Public | None | List of event categories |
+| GET | `/api/events/{id}/routes` | View routes for a specific event | Public | None | List of event routes |
+| GET | `/api/users/me/enrolments` | View the logged-in participant's enrolments | Participant | None | Participant enrolment list |
+| GET | `/api/events/{id}/enrolments` | View enrolments for a specific event | Organiser | None | Event enrolment list |
