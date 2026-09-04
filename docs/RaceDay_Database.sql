@@ -156,3 +156,23 @@ INSERT INTO EventRoutes
 VALUES
     (1, 'Cape Town 10 km Route', 10.00, 'Road route through Cape Town', 'https://example.com/routes/cape-town-10km'),
     (2, 'Johannesburg 50 km Route', 50.00, 'Road cycling route through Johannesburg', 'https://example.com/routes/joburg-50km');
+  
+-- DATABASE VERIFICATION QUERIES
+
+-- View all users
+SELECT * FROM Users;
+
+-- View all events
+SELECT * FROM Events;
+
+-- View all categories
+SELECT * FROM Categories;
+
+-- View all enrolments
+SELECT * FROM Enrolments;
+
+-- View all results
+SELECT * FROM Results;
+
+-- View all event routes
+SELECT * FROM EventRoutes;  
