@@ -72,21 +72,26 @@ The RaceDay database is designed using six main entities:
 
 The database design and relationships are documented in the ERD.
 
-See:
+The main database documentation files are:
 
-`docs/RaceDay_ERD.png`
+- [RaceDay ERD](docs/RaceDay_ERD.png)
+- [RaceDay SQL Database Script](docs/RaceDay_Database.sql)
 
-The SQL Server database script and sample data are available at:
+The ERD shows the database entities, primary keys, foreign keys, and relationships between the tables.
 
-`docs/RaceDay_Database.sql`
+The SQL script creates the database tables, applies data validation constraints, inserts sample data, and includes verification queries.
+
+## API Planning
 
 ## API Planning
 
 The planned API endpoints for RaceDay are documented in:
 
-`docs/API_Endpoint_Plan.md`
+[API Endpoint Plan](docs/API_Endpoint_Plan.md)
 
 The API uses role-based access control so that protected operations are restricted to the appropriate user role.
+
+The endpoint plan covers authentication, user profiles, events, categories, enrolments, results, and event routes.
 
 ## Repository Structure
 
