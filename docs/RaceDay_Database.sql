@@ -70,6 +70,39 @@ CREATE TABLE EventRoutes (
     FOREIGN KEY (EventId) REFERENCES Events(EventId)
 );
 
+-- DATA VALIDATION CONSTRAINTS
+
+ALTER TABLE Users
+ADD CONSTRAINT UQ_Users_Email UNIQUE (Email);
+
+ALTER TABLE Users
+ADD CONSTRAINT CK_Users_Role
+CHECK (Role IN ('Organiser', 'Participant'));
+
+ALTER TABLE Categories
+ADD CONSTRAINT CK_Categories_Distance
+CHECK (DistanceKm > 0);
+
+ALTER TABLE Categories
+ADD CONSTRAINT CK_Categories_MaxParticipants
+CHECK (MaxParticipants > 0);
+
+ALTER TABLE Categories
+ADD CONSTRAINT CK_Categories_EntryFee
+CHECK (EntryFee >= 0);
+
+ALTER TABLE Enrolments
+ADD CONSTRAINT CK_Enrolments_Status
+CHECK (Status IN ('Confirmed', 'Cancelled', 'Pending'));
+
+ALTER TABLE Results
+ADD CONSTRAINT CK_Results_Position
+CHECK (Position > 0);
+
+ALTER TABLE Results
+ADD CONSTRAINT CK_Results_Status
+CHECK (ResultStatus IN ('Finished', 'Disqualified', 'Did Not Finish'));
+
 
 
 -- SAMPLE DATA
