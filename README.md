@@ -76,3 +76,37 @@ Race Day
 │   ├── RaceDay_Database.sql
 │   └── RaceDay_ERD.png
 └── README.md
+## Setup and Verification
+
+To set up the RaceDay Part 1 project:
+
+1. Clone the RaceDay repository from GitHub.
+2. Open the project folder in Visual Studio Code.
+3. Open SQL Server Management Studio.
+4. Open `docs/RaceDay_Database.sql`.
+5. Execute the SQL script to create the RaceDay database, tables, and sample data.
+6. Verify that the `RaceDay` database and its six tables have been created successfully.
+7. The ERD can be viewed in `docs/RaceDay_ERD.png`.
+8. The planned API endpoints can be viewed in `docs/API_Endpoint_Plan.md`.
+
+## Continuous Integration
+
+GitHub Actions is used to validate the RaceDay repository structure.
+
+The CI workflow checks that the required documentation and database files are present.
+
+Workflow file:
+
+`.github/workflows/ci.yml`
+
+A successful workflow run is shown by a green check on GitHub.
+
+## SQL Demonstration Video
+
+A demonstration video showing the RaceDay SQL database script being executed and explained in SQL Server Management Studio will be provided here.
+
+**YouTube link:** To be added after the video is uploaded.
+
+## AI Use Disclosure
+
+AI tools were used during the planning and documentation process to help explain concepts, review structure, and assist with understanding requirements. The final work was reviewed and adapted by the student.
