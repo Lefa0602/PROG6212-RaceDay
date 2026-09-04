@@ -15,6 +15,10 @@ jobs:
       - name: Check required folders and files
         run: |
           test -d docs
+          test -d .github/workflows
+          test -f README.md
           test -f docs/API_Endpoint_Plan.md
           test -f docs/RaceDay_Database.sql
+          test -f docs/RaceDay_ERD.png
+          test -f .github/workflows/ci.yml
           echo "RaceDay repository structure is valid."
