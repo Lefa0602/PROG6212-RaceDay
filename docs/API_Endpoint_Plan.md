@@ -27,3 +27,38 @@
 | GET | `/api/events/{id}/routes` | View routes for a specific event | Public | None | List of event routes |
 | GET | `/api/users/me/enrolments` | View the logged-in participant's enrolments | Participant | None | Participant enrolment list |
 | GET | `/api/events/{id}/enrolments` | View enrolments for a specific event | Organiser | None | Event enrolment list |
+## Role-Based Access Control
+
+RaceDay uses two main roles: Organiser and Participant.
+
+### Public Operations
+
+Public users can:
+
+- Register an account
+- Log in
+- View events
+- View event categories
+- View event routes
+
+### Participant Operations
+
+Authenticated participants can:
+
+- View and update their own profile
+- Enrol in event categories
+- Cancel their own enrolments
+- View their enrolments
+- View race results
+
+### Organiser Operations
+
+Authenticated organisers can:
+
+- Create, update, and delete events
+- Create and manage categories
+- Add event routes
+- View event enrolments
+- Record and update race results
+
+Role restrictions must be enforced at the API level rather than relying only on the user interface.
