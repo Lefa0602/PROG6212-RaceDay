@@ -57,6 +57,7 @@ CREATE TABLE Results (
     ResultStatus NVARCHAR(20) NOT NULL,
     RecordedAt DATETIME2 NOT NULL,
     FOREIGN KEY (EnrolmentId) REFERENCES Enrolments(EnrolmentId)
+
 );
 
 -- 6. EVENT ROUTES
@@ -102,6 +103,14 @@ CHECK (Position > 0);
 ALTER TABLE Results
 ADD CONSTRAINT CK_Results_Status
 CHECK (ResultStatus IN ('Finished', 'Disqualified', 'Did Not Finish'));
+ALTER TABLE Results
+ADD CONSTRAINT UQ_Results_EnrolmentId
+UNIQUE (EnrolmentId);
+
+-- Ensure each enrolment has at most one result
+ALTER TABLE Results
+ADD CONSTRAINT UQ_Results_EnrolmentId
+UNIQUE (EnrolmentId);
 
 
 
