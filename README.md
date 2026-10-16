@@ -287,7 +287,7 @@ Accessed: 12 October 2026.
 
 A demonstration video explaining the RaceDay SQL database script and its execution in SQL Server Management Studio is available at:
 
-**YouTube:** https://youtu.be/f_h5BXToo8g
+**YouTube:** https://youtu.be/j2W3mfhMaVM
 
 ## 15. AI Use Disclosure
 
