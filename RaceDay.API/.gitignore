@@ -1,0 +1,29 @@
+
+# Visual Studio and VS Code
+.vs/
+.vscode/
+
+# .NET build files
+**/bin/
+**/obj/
+
+# Development settings and secrets
+**/appsettings.Development.json
+**/secrets.json
+**/Properties/launchSettings.json
+
+# Local Azure Storage emulator data
+__azurite_db_blob__.json
+__azurite_db_blob_extent__.json
+__azurite_db_queue*.json
+__azurite_db_table*.json
+
+# Temporary test images
+screenshots/test-image.jpg.png
+
+# Downloaded planning guide assets
+PROG6212 Planning Guide_files/
+
+# User-specific files
+*.user
+*.suo
