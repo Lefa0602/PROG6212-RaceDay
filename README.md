@@ -287,8 +287,9 @@ Accessed: 12 October 2026.
 
 A demonstration video explaining the RaceDay SQL database script and its execution in SQL Server Management Studio is available at:
 
-**YouTube:** https://youtu.be/j2W3mfhMaVM
+**YouTube:** https://www.youtube.com/watch?v=n1D0AkV6aSE
 
 ## 15. AI Use Disclosure
 
 AI tools were used to assist with understanding requirements, explaining HTML and CSS concepts, and reviewing project documentation. The student is responsible for reviewing, testing, understanding, and adapting the code and documentation submitted for assessment.
+
