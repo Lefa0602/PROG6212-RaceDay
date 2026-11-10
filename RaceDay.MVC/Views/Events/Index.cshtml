@@ -1,0 +1,78 @@
+﻿@model List<RaceDay.MVC.Models.ApiEventViewModel>
+
+@{
+    ViewData["Title"] = "Browse Events";
+}
+
+<div class="container py-5">
+    <h1 class="fw-bold mb-2">RaceDay Events</h1>
+    <p class="text-muted mb-4">
+        Discover running, walking and cycling events.
+    </p>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-warning">@ViewBag.Error</div>
+    }
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info">
+            No events are currently available.
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var eventItem in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">
+                                @eventItem.EventType
+                            </span>
+
+                            <h4 class="fw-bold">
+                                @eventItem.EventName
+                            </h4>
+
+                            <p class="text-muted">
+                                @eventItem.Description
+                            </p>
+
+                            <p>
+                                <strong>Date:</strong>
+                                @eventItem.EventDate.ToString("dd MMM yyyy")
+                            </p>
+
+                            <p>
+                                <strong>Location:</strong>
+                                @eventItem.Location
+                            </p>
+
+                            <hr />
+
+                            <h6 class="fw-bold">Event Categories</h6>
+
+                            @foreach (var category in eventItem.Categories)
+                            {
+                                <div class="mb-2">
+                                    <strong>@category.CategoryName</strong>
+                                    <br />
+                                    <small>
+                                        Distance: @category.DistanceKm km
+                                        <br />
+                                        Entry fee: R @category.EntryFee.ToString("0.00")
+                                        <br />
+                                        Participant limit: @category.MaxParticipants
+                                    </small>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
